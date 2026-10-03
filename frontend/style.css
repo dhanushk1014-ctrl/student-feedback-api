@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #222;
+    color: white;
+    margin-right: 5px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.cancel {
+    background: #777;
+}
+
+#result {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feedback-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.feedback-name {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.feedback-message {
+    color: #555;
+    margin: 8px 0 15px;
+}
+
+.delete {
+    background: #d9534f;
+}
+
+.edit {
+    background: #555;
+}
+
+.empty {
+    color: #777;
+    text-align: center;
+}
+.logout {
+    background: #777;
+}
+
+.hint {
+    color: #777;
+    font-size: 13px;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Feedback</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Feedback</h1>
+        <p class="subtitle">Feedback Management System</p>
+
+
+        <!-- LOGIN / REGISTER -->
+
+        <div class="card" id="authCard">
+
+            <h2 id="authTitle">Login</h2>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+            <button onclick="handleAuth()" id="authButton">
+                Login
+            </button>
+
+            <p id="authResult"></p>
+
+            <p>
+                <span id="switchText">
+                    Don't have an account?
+                </span>
+
+                <button
+                    class="switch-button"
+                    onclick="switchAuth()"
+                    id="switchButton"
+                >
+                    Register
+                </button>
+            </p>
+
+        </div>
+
+
+        <!-- FEEDBACK SECTION -->
+
+        <div id="feedbackSection" style="display: none;">
+            <!-- ML SENTIMENT PREDICTION -->
+
+<div class="card">
+
+    <h2>AI Sentiment Analysis</h2>
+
+    <p class="subtitle">
+        Enter text and let the ML model predict the sentiment.
+    </p>
+
+    <textarea
+        id="sentimentText"
+        placeholder="Example: I really love this application"
+    ></textarea>
+
+    <button onclick="predictSentiment()">
+        Analyze Sentiment
+    </button>
+
+    <p id="predictionResult"></p>
+
+</div>
+
+            <div class="card">
+
+                <h2 id="formTitle">
+                    Submit Feedback
+                </h2>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Enter your feedback"
+                ></textarea>
+
+                <button
+                    id="submitButton"
+                    onclick="sendFeedback()"
+                >
+                    Submit Feedback
+                </button>
+
+                <button
+                    id="cancelButton"
+                    class="cancel"
+                    onclick="cancelEdit()"
+                    style="display: none;"
+                >
+                    Cancel
+                </button>
+
+                <p id="result"></p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="list-header">
+
+                    <h2>All Feedback</h2>
+
+                    <div>
+
+                        <button onclick="loadFeedback()">
+                            Refresh
+                        </button>
+
+                        <button
+                            class="logout"
+                            onclick="logout()"
+                        >
+                            Logout
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="feedbackList">
+
+                    <p class="empty">
+                        Loading feedback...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
