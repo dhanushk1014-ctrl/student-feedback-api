@@ -1,0 +1,7 @@
+Flask
+flask-cors
+flask-jwt-extended
+Werkzeug
+scikit-learn
+joblib
+gunicorn
